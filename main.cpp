@@ -18,11 +18,11 @@ int main() {
     test.red = 100;
     test.green = 100;
     test.blue = 100;
-    //cout << test.red << " " << test.green << " " << test.blue << endl;
+    cout << test.red << " " << test.green << " " << test.blue << endl;
 
     vector<Color> myVec;
     myVec.push_back(test);
-    //cout << myVec.at(0).red << " " << myVec.at(0).green << " " << myVec.at(0).blue << endl;
+    cout << myVec.at(0).red << " " << myVec.at(0).green << " " << myVec.at(0).blue << endl;
     myVec.clear();
 
     n = rand() % (MX-MN+1) + MN;
@@ -34,26 +34,63 @@ int main() {
         myVec.push_back(temp);
     }
     for (int i = 0; i < n; i++) {
-        //cout << myVec.at(i).red << " " << myVec.at(i).green << " " << myVec.at(i).blue << endl;
+        cout << myVec.at(i).red << " " << myVec.at(i).green << " " << myVec.at(i).blue << endl;
     }
-    //cout << endl;
-    //cout << endl;
+    cout << endl;
+    cout << endl;
 
     cout << "Color#   " << "R value   " << "G value   " << "B value" << endl;
     cout << "------   " << "-------   " << "-------   " << "-------   " << endl;
     for (int i = 0; i < n; i++) {
         if ((i+1) < 10) {
             cout << "  " << i+1;
-            cout << "        " << myVec.at(i).red;
-            cout << "        " << myVec.at(i).green;
-            cout << "        " << myVec.at(i).blue << endl;
+            cout << "       " << myVec.at(i).red;
+
+            if (myVec.at(i).red < 10) {
+                cout << "         " << myVec.at(i).green;
+            }
+            else if (myVec.at(i).red < 100) {
+                cout << "        " << myVec.at(i).green;
+            }
+            else {
+                cout << "       " << myVec.at(i).green;
+            }
+
+            if (myVec.at(i).green < 10) {
+                cout << "         " << myVec.at(i).blue;
+            }
+            else if (myVec.at(i).green < 100) {
+                cout << "        " << myVec.at(i).blue;
+            }
+            else {
+                cout << "       " << myVec.at(i).blue;
+            }
         }
         else {
             cout << "  " << i+1;
-            cout << "       " << myVec.at(i).red; 
-            cout << "        " << myVec.at(i).green;
-            cout << "        " << myVec.at(i).blue << endl;
+            cout << "      " << myVec.at(i).red; 
+
+            if (myVec.at(i).red < 10) {
+                cout << "         " << myVec.at(i).green;
+            }
+            else if (myVec.at(i).red < 100) {
+                cout << "        " << myVec.at(i).green;
+            }
+            else {
+                cout << "       " << myVec.at(i).green;
+            }
+
+            if (myVec.at(i).green < 10) {
+                cout << "         " << myVec.at(i).blue;
+            }
+            else if (myVec.at(i).green < 100) {
+                cout << "        " << myVec.at(i).blue;
+            }
+            else {
+                cout << "       " << myVec.at(i).blue;
+            }
         }
+        cout << endl;
     }
     
     return 0;
