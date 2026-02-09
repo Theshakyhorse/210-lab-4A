@@ -25,6 +25,7 @@ int main() {
     cout << myVec.at(0).red << " " << myVec.at(0).green << " " << myVec.at(0).blue << endl;
     myVec.clear();
 
+    //populating vector with n random hue values then outputing them
     n = rand() % (MX-MN+1) + MN;
     for(int i = 1; i <= n; i++) {
         Color temp;
@@ -39,6 +40,7 @@ int main() {
     cout << endl;
     cout << endl;
 
+    //formatting into a presentable table
     cout << "Color#   " << "R value   " << "G value   " << "B value" << endl;
     cout << "------   " << "-------   " << "-------   " << "-------   " << endl;
     for (int i = 0; i < n; i++) {
