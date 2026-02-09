@@ -31,6 +31,17 @@ int main() {
         temp.red = rand() % 255;
         temp.green = rand() % 255;
         temp.blue = rand() % 255;
+        myVec.push_back(temp);
     }
+    for (int i = 0; i < n; i++) {
+        cout << myVec.at(i).red << " " << myVec.at(i).green << " " << myVec.at(i).blue << endl;
+    }
+    cout << endl;
+    cout << endl;
+
+    cout << "Color#   " << "R value   " << "G value   " << "B value" << endl;
+    cout << "------   " << "-------   " << "-------   " << "-------   " << endl;
+    
+    
     return 0;
 }
